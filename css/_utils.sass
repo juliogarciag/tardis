@@ -1,0 +1,49 @@
+@function scaled($size)
+  @return #{$scale-factor * $size}px
+
+=rect($width, $height)
+  width: scaled($width)
+  height: scaled($height)
+
+=coord($top, $left, $position: absolute)
+  position: $position
+  top: scaled($top)
+  left: scaled($left)
+
+=blue
+  background-color: $tardis-color
+
+=uncolored-base($margin)
+  margin: auto scaled($margin)
+
+=base($margin)
+  +blue
+  +uncolored-base($margin)
+
+// This is a modification of the linear-gradient mixin of Bourbon
+// This mixin make a tradeoff:
+// - we lose the posibility of specifying a fallback-color
+// - we lose the automatic position
+// - we gain unlimited gradients
+
+// TODO: Defeat the tradeoffs
+
+=linear-gradient($pos, $G1, $gradients...)
+  // Detect what type of value exists in $pos
+  $pos-type: type-of(nth($pos, 1))
+  $pos-spec: null
+  $pos-degree: null
+
+  $positions: _linear-positions-parser($pos)
+  $pos-degree: nth($positions, 1)
+  $pos-spec:   nth($positions, 2)
+
+  $full: $G1, $gradients
+
+  // Set $G1 as the default fallback color
+  $fallback-color: nth($G1, 1)
+
+  background-color: $fallback-color
+  background-image: -webkit-linear-gradient($pos-degree $full)
+  // Safari 5.1+, Chrome
+  background-image: unquote("linear-gradient(#{$pos-spec}#{$full})")

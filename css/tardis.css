@@ -1,0 +1,118 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.tardis {
+  position: absolute;
+  top: 80px;
+  left: 80px;
+  padding-bottom: 2em; }
+  .tardis .lighthouse {
+    margin: auto 192px; }
+    .tardis .lighthouse .pillar {
+      width: 2px;
+      height: 4px;
+      background-color: #3c445d;
+      margin: auto 28px; }
+    .tardis .lighthouse .dome {
+      background-color: #3c445d;
+      width: 56px;
+      height: 20px;
+      border-radius: 28px/21.2px;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0; }
+    .tardis .lighthouse .base {
+      background-color: #3c445d;
+      width: 56px;
+      height: 8px; }
+    .tardis .lighthouse .levels {
+      background-color: transparent;
+      background-image: -webkit-linear-gradient(left, transparent, transparent 10%, #3c445d 10%, #3c445d 17%, transparent 17%, transparent 48%, #3c445d 48%, #3c445d 52%, transparent 52%, transparent 83%, #3c445d 83%, #3c445d 90%, transparent 90%, transparent 100%);
+      background-image: linear-gradient(to right,transparent, transparent 10%, #3c445d 10%, #3c445d 17%, transparent 17%, transparent 48%, #3c445d 48%, #3c445d 52%, transparent 52%, transparent 83%, #3c445d 83%, #3c445d 90%, transparent 90%, transparent 100%); }
+    .tardis .lighthouse .level {
+      width: 56px;
+      height: 16px;
+      border-top: 1px solid #3c445d; }
+  .tardis .roof .cone {
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    background-color: #3c445d;
+    margin: auto 40px;
+    width: 56px;
+    height: 0px;
+    border-top: 0 solid transparent;
+    border-bottom: 32px solid transparent;
+    border-left: 152px solid white;
+    border-right: 152px solid white; }
+  .tardis .roof .base-3 {
+    background-color: #3c445d;
+    margin: auto 40px;
+    width: 360px;
+    height: 36px; }
+  .tardis .roof .base-2 {
+    background-color: #3c445d;
+    margin: auto 24px;
+    width: 392px;
+    height: 4px; }
+  .tardis .roof .base-1 {
+    background-color: #3c445d;
+    margin: auto 12px;
+    width: 416px;
+    height: 28px; }
+  .tardis .front {
+    position: relative; }
+    .tardis .front .body {
+      background-color: #3c445d;
+      width: 440px;
+      height: 720px;
+      padding: 8px 12px;
+      position: relative; }
+    .tardis .front .poster-box {
+      padding: 4px 12px; }
+      .tardis .front .poster-box .poster {
+        background-color: black;
+        color: #f7f7f7;
+        font-family: "Gill Sans";
+        font-weight: 100;
+        height: 44px;
+        padding: 8px; }
+        .tardis .front .poster-box .poster span {
+          display: inline-block;
+          font-size: 24px; }
+        .tardis .front .poster-box .poster .public-call {
+          font-size: 13.2px;
+          width: 100px;
+          letter-spacing: 0.3em;
+          text-align: center; }
+        .tardis .front .poster-box .poster .text {
+          position: relative;
+          left: 52px; }
+        .tardis .front .poster-box .poster .police, .tardis .front .poster-box .poster .box {
+          font-size: 28px;
+          position: relative;
+          top: -3.2px; }
+    .tardis .front .wings {
+      background-color: #3c445d;
+      position: absolute;
+      top: 8px;
+      left: -12px;
+      width: 464px;
+      height: 56px; }
+  .tardis .pedestal {
+    position: absolute;
+    top: 916px;
+    left: -12px; }
+    .tardis .pedestal .base {
+      background-color: #3c445d; }
+    .tardis .pedestal .base-2 {
+      width: 464px;
+      height: 0px;
+      border-top: 0 solid transparent;
+      border-bottom: 8px solid transparent;
+      border-left: 12px solid white;
+      border-right: 12px solid white; }
+    .tardis .pedestal .base-1 {
+      width: 464px;
+      height: 16px; }

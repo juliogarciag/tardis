@@ -1,0 +1,114 @@
+// Bourbon
+@import "bourbon/bourbon"
+
+// Settings
+@import "_settings"
+
+// Specific Mixins and functions
+@import "_utils"
+
+=lighthouse
+  +uncolored-base(48)
+  .pillar
+    +rect(0.5, 1)
+    +base(7)
+  .dome
+    +blue
+    +rect(14, 5)
+    border-radius: scaled(7)/scaled(5.3)
+    border-bottom-left-radius: 0
+    border-bottom-right-radius: 0
+  .base
+    +blue
+    +rect(14, 2)
+  .levels
+    +linear-gradient(left, transparent, transparent 10%, $tardis-color 10%, $tardis-color 17%, transparent 17%, transparent 48%, $tardis-color 48%, $tardis-color 52%, transparent 52%, transparent 83%, $tardis-color 83%, $tardis-color 90%, transparent 90%, transparent 100%)
+  .level
+    +rect(14, 4)
+    border-top: 1px solid $tardis-color
+
+=roof
+  .cone
+    +box-sizing(content-box)
+    +base(10)
+    +rect(14, 0)
+    border-top: 0 solid transparent
+    border-bottom: scaled(8) solid transparent
+    border-left: scaled(38) solid $outside-color
+    border-right: scaled(38) solid $outside-color
+  .base-3
+    +base(10)
+    +rect(90, 9)
+  .base-2
+    +base(6)
+    +rect(98, 1)
+  .base-1
+    +base(3)
+    +rect(104, 7)
+
+=poster-box
+  padding: scaled(1) scaled(3)
+  .poster
+    background-color: hsl(0, 0, 0)
+    color: hsl(0, 0, 97)
+    font-family: "Gill Sans"
+    font-weight: 100
+    height: scaled(11)
+    padding: scaled(2)
+    span
+      display: inline-block
+      font-size: scaled(6)
+    .public-call
+      font-size: scaled(3.3)
+      width: scaled(25)
+      letter-spacing: 0.3em
+      text-align: center
+    .text
+      position: relative
+      left: scaled(13)
+    .police, .box
+      font-size: scaled(7)
+      position: relative
+      top: scaled(-0.8)
+
+=front
+  position: relative
+  .body
+    +blue
+    +rect(110, 180)
+    padding: scaled(2) scaled(3)
+    position: relative
+  .poster-box
+    +poster-box
+  .wings
+    +blue
+    +coord(2, -3)
+    +rect(116, 14)
+
+=pedestal
+  +coord(229, -3)
+  .base
+    +blue
+  .base-2
+    +rect(116, 0)
+    border-top: 0 solid transparent
+    border-bottom: scaled(2) solid transparent
+    border-left: scaled(3) solid $outside-color
+    border-right: scaled(3) solid $outside-color
+  .base-1
+    +rect(116, 4)
+
+*
+  +box-sizing(border-box)
+
+.tardis
+  +coord(20, 20)
+  padding-bottom: 2em
+  .lighthouse
+    +lighthouse
+  .roof
+    +roof
+  .front
+    +front
+  .pedestal
+    +pedestal
